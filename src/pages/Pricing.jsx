@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, X, ChevronDown, Minus, Slack, CreditCard, ChevronRight } from 'lucide-react';
+import { Check, X, ChevronDown, Minus, Slack, CreditCard, ChevronRight, ArrowUp } from 'lucide-react';
 import Button from '../components/Button';
 import { cn } from '../lib/utils';
 import { Link } from 'react-router-dom';
@@ -435,7 +435,13 @@ const Pricing = () => {
           </div>
         </div>
       </section>
+      {/* Back to top button */}
+      <a href="#top" className="back-to-top">
+        <ArrowUp className="h-5 w-5" />
+      </a>
+    {/* </div> */}
     </div>
+    
   );
 };
 
