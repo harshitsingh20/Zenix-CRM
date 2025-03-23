@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, ArrowUp, Check, ChevronRight, Phone, Mail, Users, Check as CheckIcon, Slack, CreditCard, CreditCard as Stripe, HelpCircle } from 'lucide-react';
 import Button from '../components/Button';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   const brandLogos = [
@@ -14,6 +15,7 @@ const Home = () => {
   ];
   return (
     <div className="page-transition">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7, delay: 0.2 }} className="relative">
       {/* Hero Section */}
       <section className="relative teal-bg text-white">
         <div className="page-container flex flex-col md:flex-row pt-8 pb-12 md:pt-12 md:pb-16 items-center gap-20">
@@ -525,6 +527,7 @@ const Home = () => {
       <a href="#top" className="back-to-top">
         <ArrowUp className="h-5 w-5" />
       </a>
+      </motion.div>
     </div>
   );
 };

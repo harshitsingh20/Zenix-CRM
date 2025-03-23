@@ -4,6 +4,8 @@ import Button from '../components/Button';
 import { cn } from '../lib/utils';
 import { Link } from 'react-router-dom';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
+import { motion } from 'framer-motion';
+
 
 const Pricing = () => {
   const [billingCycle, setBillingCycle] = useState('monthly');
@@ -109,8 +111,15 @@ const Pricing = () => {
   
   return (
     <div className="page-transition">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
       <section className="section bg-background pt-20">
         <div className="container mx-auto px-4">
+        <motion.div 
+            initial={{ y: -20, opacity: 0 }} 
+            animate={{ y: 0, opacity: 1 }} 
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto mb-20 text-center"
+          >
           <div className="max-w-4xl mx-auto mb-20">
             <div className="inline-block px-3 py-1 bg-green-100 text-green-600 text-sm rounded-full mb-6">
               Pricing Plans
@@ -128,10 +137,17 @@ const Pricing = () => {
               <span className="text-green-500">Pricing</span>
             </div>
           </div>
+          </motion.div>
         </div>
       </section>
       
       <section className="section bg-background -mt-8 pb-20">
+      <motion.div 
+            initial={{ y: -20, opacity: 0 }} 
+            animate={{ y: 0, opacity: 1 }} 
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto mb-20 text-center"
+          >
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {mainPlans.map((plan, index) => (
@@ -166,9 +182,16 @@ const Pricing = () => {
             ))}
           </div>
         </div>
+        </motion.div>
       </section>
       
       <section className="py-12 teal-bg">
+      <motion.div 
+            initial={{ y: -20, opacity: 0 }} 
+            animate={{ y: 0, opacity: 1 }} 
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto mb-20 text-center"
+          >
         <div className="container mx-auto px-4">
           <h3 className="text-white text-center text-lg font-medium mb-10">
             Trusted By 100,000+ Teams Globally At Innovative Companies
@@ -182,9 +205,16 @@ const Pricing = () => {
             ))}
           </div>
         </div>
+        </motion.div>
       </section>
       
       <section className="section bg-green-50">
+      <motion.div 
+            initial={{ y: -20, opacity: 0 }} 
+            animate={{ y: 0, opacity: 1 }} 
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto mb-20 text-center"
+          >
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto bg-white rounded-xl overflow-hidden shadow-sm">
             <div className="p-8 border-b">
@@ -228,9 +258,16 @@ const Pricing = () => {
             </div>
           </div>
         </div>
+        </motion.div>
       </section>
       
       <section className="py-20 teal-bg text-white">
+      <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="relative"
+          >
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-block px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-sm mb-6">
@@ -376,9 +413,16 @@ const Pricing = () => {
             </div>
           </div>
         </div>
+        </motion.div>
       </section>
       
       <section className="section">
+      <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="relative"
+          >
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
@@ -407,9 +451,16 @@ const Pricing = () => {
             </Accordion>
           </div>
         </div>
+        </motion.div>
       </section>
       
       <section className="section teal-bg">
+      <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="relative"
+          >
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 items-center gap-12">
             <div>
@@ -434,12 +485,14 @@ const Pricing = () => {
             </div>
           </div>
         </div>
+        </motion.div>
       </section>
       {/* Back to top button */}
       <a href="#top" className="back-to-top">
         <ArrowUp className="h-5 w-5" />
       </a>
     {/* </div> */}
+    </motion.div>
     </div>
     
   );

@@ -5,6 +5,7 @@ import Button from '../components/Button';
 import { Link } from 'react-router-dom';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from '../components/ui/breadcrumb';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
+import { motion } from 'framer-motion';
 
 const Features = () => {
   // Integration cards data
@@ -95,6 +96,7 @@ const Features = () => {
 
   return (
     <div className="page-transition">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7, delay: 0.2 }} className="relative">
       {/* Hero Section */}
       <section className="bg-gray-100 py-16 md:py-24">
         <div className="container mx-auto px-4">
@@ -263,6 +265,7 @@ const Features = () => {
       <a href="#top" className="back-to-top">
         <ArrowUp className="h-5 w-5" />
       </a>
+      </motion.div>
     </div>
   );
 };
