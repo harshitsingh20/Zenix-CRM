@@ -16,11 +16,18 @@ const Home = () => {
     <div className="page-transition">
       {/* Hero Section */}
       <section className="relative teal-bg text-white">
-        <div className="page-container flex flex-col md:flex-row pt-8 pb-12 md:pt-12 md:pb-16 items-center">
+        <div className="page-container flex flex-col md:flex-row pt-8 pb-12 md:pt-12 md:pb-16 items-center gap-20">
+          <div className="flex-1 mt-12 md:mt-0">
+            <div className="relative">
+            <div className="w-full h-full rounded-full bg-zenix-green absolute top-0 right-0 "></div>
+            <img 
+              src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" 
+              alt="Business dashboard" 
+              className="relative z-10 mx-auto rounded-lg shadow-xl"
+            />
+            </div>
+          </div>
           <div className="flex-1 md:pr-12">
-            {/* <Button to="/signup" variant="glass" className="glass-morphism hover:bg-green-500 hover:text-white mb-6 text-white bg-transparent">
-              Get Started
-            </Button> */}
             
             <h1 className="heading-xl mb-6 text-white">
               Ready To Boost Your Business?
@@ -39,55 +46,9 @@ const Home = () => {
               </Button>
             </div>
           </div>
-          
-          <div className="flex-1 mt-12 md:mt-0">
-            <div className="relative">
-            <div className="w-full h-full rounded-full bg-zenix-green absolute top-0 right-0 "></div>
-            <img 
-              src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" 
-              alt="Business dashboard" 
-              className="relative z-10 mx-auto rounded-lg shadow-xl"
-            />
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* Logo Section
-      <section className="py-12 bg-gray-50">
-        <div className="container mx-auto">
-          <div className="flex flex-col items-center">
-            <div className="flex items-center mb-4">
-              <img 
-                src="/cdac39ff-c7e6-4f20-a12c-8b1b9259dd12.png" 
-                alt="Zenix Logo" 
-                className="h-10 mr-2"
-              />
-              <h2 className="text-2xl font-bold">Zenix</h2>
-              <span className="mx-3 text-gray-400">CRM Platform Built For</span>
-              <span className="text-green-500 font-semibold">Success</span>
-            </div>
-            
-            <div className="flex flex-wrap justify-center gap-8 mt-6">
-              <div className="flex items-center text-gray-500">
-                <Phone className="h-5 w-5 mr-2 text-green-500" />
-                <div>
-                  <span className="block text-sm text-gray-400">Phone</span>
-                  <span>+91 3497 - 347</span>
-                </div>
-              </div>
-              
-              <div className="flex items-center text-gray-500">
-                <Mail className="h-5 w-5 mr-2 text-green-500" />
-                <div>
-                  <span className="block text-sm text-gray-400">Email</span>
-                  <span>mail@example.com</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-      {/* </section> */}
       
       {/* CRM Platform Section */}
       <section className="py-16 text-center">
@@ -104,15 +65,6 @@ const Home = () => {
             Eliminate repetitive customer service tasks with easy-to-configure automation, boosting efficiency.
           </p>
           
-          {/* <div className="flex justify-center">
-            <div className="max-w-5xl w-full">
-              <img 
-                src="1f71aa5e-0f38-41c4-8b5b-b1c6a687f572.png" 
-                alt="Zenix Dashboard" 
-                className="w-full rounded-lg shadow-xl"
-              />
-            </div>
-          </div> */}
         </div>
       </section>
       
@@ -120,12 +72,51 @@ const Home = () => {
       <section className="py-0 ">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="p-3 bg-green-100 rounded-full inline-block mb-4">
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                  <Users className="h-4 w-4 text-white" />
+          <div>
+              <div className="bg-white p-4 rounded-xl shadow-lg">
+                <div className="flex items-center mb-4">
+                  <div className="text-gray-400 w-20">Daily Traffic</div>
+                  <div className="text-green-500 ml-2">+2.45%</div>
+                </div>
+                
+                <div className="text-4xl font-bold ">2.579</div>
+                <div className=" text-sm mb-6">Visitors</div>
+                
+                <div className="flex h-36 items-end space-x-2">
+                  <div className="w-8 bg-gradient-to-t from-green-50 to-green-800 h-24 rounded-t-md"></div>
+                  <div className="w-8 bg-gradient-to-t from-green-50 to-green-800 h-16 rounded-t-md"></div>
+                  <div className="w-8 bg-gradient-to-t from-green-50 to-green-800 h-32 rounded-t-md"></div>
+                  <div className="w-8 bg-gradient-to-t from-green-50 to-green-800 h-20 rounded-t-md"></div>
+                  <div className="w-8 bg-gradient-to-t from-green-50 to-green-800 h-28 rounded-t-md"></div>
+                  <div className="w-8 bg-gradient-to-t from-green-50 to-green-800 h-36 rounded-t-md"></div>
+                  <div className="w-8 bg-gradient-to-t from-green-50 to-green-800 h-12 rounded-t-md"></div>
+                </div>
+                
+                <div className="flex justify-between text-xs  mt-2">
+                  <span>00</span>
+                  <span>04</span>
+                  <span>08</span>
+                  <span>12</span>
+                  <span>14</span>
+                  <span>16</span>
+                  <span>18</span>
                 </div>
               </div>
+            </div>
+            <div>
+              
+              <h2 className="text-3xl font-bold mb-6">Reach out for a personalized consultation</h2>
+              
+              <p className=" mb-8">
+              Eliminate repetitive customer service tasks with easy-to-configure automation, boosting efficiency.
+              </p>
+              
+              <Button to="/pricing" className="bg-green-500 hover:bg-green-600 text-white">
+                View Pricing
+              </Button>
+            </div>
+
+            <div>
               
               <h2 className="text-3xl font-bold mb-6">Share Tools Quickly And Confidently In Minutes</h2>
               
@@ -173,6 +164,164 @@ const Home = () => {
         </div>
       </section>
       
+      {/* Slide Section */}
+      <section className="py-12 teal-bg">
+        <div className="container mx-auto px-4">
+          <h3 className="text-white text-center text-lg font-medium mb-10">
+            Trusted By 100,000+ Teams Globally At Innovative Companies
+          </h3>
+          
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            {brandLogos.map((brand, index) => (
+              <div key={index} className="text-white font-bold text-xl">
+                {brand.name}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      
+      {/* Testimonials Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="inline-block feature-tag mb-6">
+              <span>Reviews</span>
+            </div>
+            
+            <h2 className="heading-lg mb-6">
+              What Our Customers Say
+            </h2>
+            
+            <p className="text-gray-600 max-w-2xl mx-auto mb-4">
+              Witness firsthand the user appreciation for our uncomplicated ticketing system in their daily activities.
+            </p>
+            
+            <Link to="/testimonials" className="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full transition-colors">
+              View all reviews
+            </Link>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Khyati H.",
+                role: "Designer",
+                quote: "Zenix has been instrumental in helping us close deals faster. Its automation features have allowed us to focus on building relationships with our clients.",
+                avatar: "https://wallpapers.com/images/featured/avatar-png-39rb7p1vdr4fh6ed.png"
+              },
+              {
+                name: "Maya",
+                role: "Designer",
+                quote: "Zenix has exceeded our expectations in every way. From its seamless integration with our existing tools to its robust reporting capabilities, it has become an indispensable asset.",
+                avatar: "https://wallpapers.com/images/featured/avatar-png-39rb7p1vdr4fh6ed.png"
+              },
+              {
+                name: "John Doe",
+                role: "Designer",
+                quote: "I wanted to take a moment to express my gratitude for the exceptional service they provided. Their support and dedication were truly impressive.",
+                avatar: "https://www.pngarts.com/files/3/Avatar-Transparent-Image.png"
+              }
+            ].map((testimonial, index) => (
+              <div key={index} className="bg-gray-50 rounded-xl p-8">
+                <div className="mb-6">
+                  <img 
+                    src={testimonial.avatar} 
+                    alt={testimonial.name} 
+                    className="w-16 h-16 rounded-full mx-auto mb-4"
+                  />
+                </div>
+                
+                <p className="text-gray-700 mb-6">
+                  "{testimonial.quote}"
+                </p>
+                
+                <div>
+                  <h4 className="font-medium">{testimonial.name}</h4>
+                  <p className="text-gray-500 text-sm">{testimonial.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Company History Section */}
+      <section className="py-16 ">
+        <div className="container mx-auto px-4">
+          <div className="max-w-8xl mx-auto bg-white rounded-2xl shadow-sm overflow-hidden">
+            <div className="p-8 md:p-12">
+              <div className="inline-block px-3 py-1 rounded-full bg-green-100 text-green-600 text-sm mb-6">
+                Company History
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-12">
+                <div>
+                  <h2 className="text-3xl font-bold mb-6">
+                    Our Journey From Inception To Present Day
+                  </h2>
+                  
+                  <div className="mb-8">
+                    <h3 className="text-xl font-semibold mb-3">Our Vision</h3>
+                    <p className="text-gray-600">
+                      We are committed to continuously innovating in the development of CRM solutions that deliver added value to businesses worldwide.
+                    </p>
+                    
+                    <div className="mt-6 flex space-x-4">
+                      <Button className="bg-green-500 hover:bg-green-600 text-white">
+                        Contact Us
+                      </Button>
+                      <Button variant="outline" className="border-gray-300 hover:border-gray-400">
+                        View Pricing
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+                
+                <div>
+                  <p className="text-gray-600 mb-8">
+                    Founded in 2010, began as a small startup with a big vision to revolutionize customer relationship management
+                  </p>
+                  
+                  <h3 className="text-xl font-semibold mb-4">Our Mission</h3>
+                  
+                  <ul className="space-y-3">
+                    {[
+                      "Enhance Relationships",
+                      "Drive Business Success",
+                      "Innovate Continuously",
+                      "Ensure Reliability",
+                      "Focus on Integrity",
+                      "Deliver Excellent Service",
+                      "Inspire Positive Change",
+                      "Create Meaningful Relationships"
+                    ].map((item, index) => (
+                      <li key={index} className="flex items-center">
+                        <span className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center mr-3">
+                          <CheckIcon className="h-3 w-3 text-white" />
+                        </span>
+                        <span className="text-gray-700">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div className="flex justify-center">
+            <div className="max-w-5xl w-full">
+              <img 
+                src="/lovable-uploads/1f71aa5e-0f38-41c4-8b5b-b1c6a687f572.png" 
+                alt="Zenix Dashboard" 
+                className="w-full rounded-lg shadow-xl"
+              />
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
       {/* Integrations Section */}
       <section className="py-20 teal-bg text-white">
         <div className="container mx-auto px-4">
@@ -318,167 +467,6 @@ const Home = () => {
                 Learn More <ChevronRight className="h-4 w-4 ml-1" />
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Testimonials Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <div className="inline-block feature-tag mb-6">
-              <span>Reviews</span>
-            </div>
-            
-            <h2 className="heading-lg mb-6">
-              What Our Customers Say
-            </h2>
-            
-            <p className="text-gray-600 max-w-2xl mx-auto mb-4">
-              Witness firsthand the user appreciation for our uncomplicated ticketing system in their daily activities.
-            </p>
-            
-            <Link to="/testimonials" className="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full transition-colors">
-              View all reviews
-            </Link>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Khyati H.",
-                role: "Designer",
-                quote: "Zenix has been instrumental in helping us close deals faster. Its automation features have allowed us to focus on building relationships with our clients.",
-                avatar: "https://wallpapers.com/images/featured/avatar-png-39rb7p1vdr4fh6ed.png"
-              },
-              {
-                name: "Maya",
-                role: "Designer",
-                quote: "Zenix has exceeded our expectations in every way. From its seamless integration with our existing tools to its robust reporting capabilities, it has become an indispensable asset.",
-                avatar: "https://wallpapers.com/images/featured/avatar-png-39rb7p1vdr4fh6ed.png"
-              },
-              {
-                name: "John Doe",
-                role: "Designer",
-                quote: "I wanted to take a moment to express my gratitude for the exceptional service they provided. Their support and dedication were truly impressive.",
-                avatar: "https://www.pngarts.com/files/3/Avatar-Transparent-Image.png"
-              }
-            ].map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-8">
-                <div className="mb-6">
-                  <img 
-                    src={testimonial.avatar} 
-                    alt={testimonial.name} 
-                    className="w-16 h-16 rounded-full mx-auto mb-4"
-                  />
-                </div>
-                
-                <p className="text-gray-700 mb-6">
-                  "{testimonial.quote}"
-                </p>
-                
-                <div>
-                  <h4 className="font-medium">{testimonial.name}</h4>
-                  <p className="text-gray-500 text-sm">{testimonial.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      
-      {/* Company History Section */}
-      <section className="py-16 ">
-        <div className="container mx-auto px-4">
-          <div className="max-w-8xl mx-auto bg-white rounded-2xl shadow-sm overflow-hidden">
-            <div className="p-8 md:p-12">
-              <div className="inline-block px-3 py-1 rounded-full bg-green-100 text-green-600 text-sm mb-6">
-                Company History
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-12">
-                <div>
-                  <h2 className="text-3xl font-bold mb-6">
-                    Our Journey From Inception To Present Day
-                  </h2>
-                  
-                  <div className="mb-8">
-                    <h3 className="text-xl font-semibold mb-3">Our Vision</h3>
-                    <p className="text-gray-600">
-                      We are committed to continuously innovating in the development of CRM solutions that deliver added value to businesses worldwide.
-                    </p>
-                    
-                    <div className="mt-6 flex space-x-4">
-                      <Button className="bg-green-500 hover:bg-green-600 text-white">
-                        Contact Us
-                      </Button>
-                      <Button variant="outline" className="border-gray-300 hover:border-gray-400">
-                        View Pricing
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-                
-                <div>
-                  <p className="text-gray-600 mb-8">
-                    Founded in 2010, began as a small startup with a big vision to revolutionize customer relationship management
-                  </p>
-                  
-                  <h3 className="text-xl font-semibold mb-4">Our Mission</h3>
-                  
-                  <ul className="space-y-3">
-                    {[
-                      "Enhance Relationships",
-                      "Drive Business Success",
-                      "Innovate Continuously",
-                      "Ensure Reliability",
-                      "Focus on Integrity",
-                      "Deliver Excellent Service",
-                      "Inspire Positive Change",
-                      "Create Meaningful Relationships"
-                    ].map((item, index) => (
-                      <li key={index} className="flex items-center">
-                        <span className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center mr-3">
-                          <CheckIcon className="h-3 w-3 text-white" />
-                        </span>
-                        <span className="text-gray-700">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            {/* <img 
-              src="a1d3418b-bf94-44c5-9997-3705028bff76.png" 
-              alt="Company office" 
-              className="w-full h-72 object-cover"
-            /> */}
-            <div className="flex justify-center">
-            <div className="max-w-5xl w-full">
-              <img 
-                src="/lovable-uploads/1f71aa5e-0f38-41c4-8b5b-b1c6a687f572.png" 
-                alt="Zenix Dashboard" 
-                className="w-full rounded-lg shadow-xl"
-              />
-            </div>
-          </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 teal-bg">
-        <div className="container mx-auto px-4">
-          <h3 className="text-white text-center text-lg font-medium mb-10">
-            Trusted By 100,000+ Teams Globally At Innovative Companies
-          </h3>
-          
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            {brandLogos.map((brand, index) => (
-              <div key={index} className="text-white font-bold text-xl">
-                {brand.name}
-              </div>
-            ))}
           </div>
         </div>
       </section>
