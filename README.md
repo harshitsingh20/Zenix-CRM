@@ -62,6 +62,12 @@ npm run dev
 ```
 npm run dev
 ```
+3. In another terminal, start the MongoDB locally
+```
+sudo systemctl start mongod
+
+sudo systemctl status mongod
+```
 
 3. Access the application at http://localhost:5173
 
