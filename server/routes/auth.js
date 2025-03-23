@@ -5,10 +5,10 @@ const jwt = require('jsonwebtoken');
 const { check, validationResult } = require('express-validator');
 const auth = require('../middleware/auth');
 const User = require('../models/User');
+const bcrypt = require('bcryptjs');
 
-// @route   POST api/auth/register
-// @desc    Register user
-// @access  Public
+
+
 router.post(
   '/register',
   [
@@ -69,58 +69,39 @@ router.post(
 // @route   POST api/auth/login
 // @desc    Authenticate user & get token
 // @access  Public
-router.post(
-  '/login',
-  [
-    check('email', 'Please include a valid email').isEmail(),
-    check('password', 'Password is required').exists()
-  ],
-  async (req, res) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
-    }
+router.post('/login', async (req, res) => {
+  const { email, password } = req.body;
 
-    const { email, password } = req.body;
-
-    try {
-      // Check if user exists
+  try {
+      // Find user by email
       let user = await User.findOne({ email });
 
       if (!user) {
-        return res.status(400).json({ msg: 'Invalid credentials' });
+          return res.status(400).json({ msg: 'Invalid credentials' });
       }
 
-      // Check password
-      const isMatch = await user.comparePassword(password);
+      console.log("User found:", user); // Debugging step
+
+      // Compare the entered password with the hashed password
+      const isMatch = await bcrypt.compare(password, user.password);
+      console.log("Password Match:", isMatch); // Debugging step
 
       if (!isMatch) {
-        return res.status(400).json({ msg: 'Invalid credentials' });
+          return res.status(400).json({ msg: 'Invalid credentials' });
       }
 
-      // Create JWT payload
-      const payload = {
-        user: {
-          id: user.id
-        }
-      };
-
-      // Sign and return JWT token
-      jwt.sign(
-        payload,
-        process.env.JWT_SECRET,
-        { expiresIn: '7d' },
-        (err, token) => {
+      // Generate JWT token
+      const payload = { user: { id: user.id } };
+      jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' }, (err, token) => {
           if (err) throw err;
           res.json({ token });
-        }
-      );
-    } catch (err) {
-      console.error(err.message);
+      });
+
+  } catch (err) {
+      console.error("Login error:", err.message);
       res.status(500).send('Server error');
-    }
   }
-);
+});
 
 // @route   GET api/auth/me
 // @desc    Get current user

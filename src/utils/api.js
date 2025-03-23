@@ -57,6 +57,8 @@ export const registerUser = async (userData) => {
 // Login user
 export const loginUser = async (email, password) => {
   try {
+    console.log("Login Request:", { email, password }); // Debugging step
+
     const response = await fetch(`${API_URL}/auth/login`, {
       method: 'POST',
       headers: {
@@ -64,13 +66,14 @@ export const loginUser = async (email, password) => {
       },
       body: JSON.stringify({ email, password })
     });
-    
+
     const data = await response.json();
-    
+    console.log("Login Response:", data); // Debugging step
+
     if (!response.ok) {
       throw { response: { data } };
     }
-    
+
     setAuthToken(data.token);
     return data;
   } catch (error) {
